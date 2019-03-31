@@ -5,15 +5,17 @@ const isDevelopment = process.env.NODE_ENV === 'development';
 module.exports = {
     mode:  process.env.NODE_ENV,
     entry: './src/index.js',
+    watch: true,
     output: {
         path: path.resolve(__dirname, 'docs'),
         filename: 'index.js',
     },
-    plugins: [
-        new HtmlWebpackPlugin()
-    ],
     module: {
         rules: [
+            {
+                test: /\.(jpe?g|png|gif|svg)$/i,
+                loader:'file-loader'
+            },
             {
                 test: /\.m?js$/,
                 exclude: /(node_modules)/,
@@ -38,6 +40,10 @@ module.exports = {
         new MiniCssExtractPlugin({
             filename: '[name].css',
             chunkFilename: '[id].css'
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'index.html',
+            template: 'src/index.html'
         })
     ]
 }
