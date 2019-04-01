@@ -1,5 +1,6 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const HtmlWebpackInlineSVGPlugin = require('html-webpack-inline-svg-plugin');
 var path = require('path');
 const isDevelopment = process.env.NODE_ENV === 'development';
 module.exports = {
@@ -13,8 +14,12 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.(jpe?g|png|gif|svg)$/i,
+                test: /\.(jpe?g|png|gif)$/i,
                 loader:'file-loader'
+            },
+            { 
+                test: /\.svg$/, 
+                loader: 'svg-loader?pngScale=2'
             },
             {
                 test: /\.m?js$/,
@@ -44,6 +49,9 @@ module.exports = {
         new HtmlWebpackPlugin({
             filename: 'index.html',
             template: 'src/index.html'
-        })
+        }),
+        new HtmlWebpackInlineSVGPlugin({
+            runPreEmit: true,
+        }),
     ]
 }
