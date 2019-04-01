@@ -3,5 +3,14 @@
     justify-content: space-between;
     align-items: center;
     padding: 40px;
-    color: #939aa7;
+    color:$manatee;
+    &__col {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__link {
+        font-weight: bold;
+        color: $manatee;
+    }
 }

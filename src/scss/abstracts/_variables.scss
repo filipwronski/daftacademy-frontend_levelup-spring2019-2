@@ -8,14 +8,11 @@
 
 /// Regular font family
 /// @type List
-$text-font-stack: 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
+$text-font-stack: 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
 
 /// Code (monospace) font family
 /// @type List
 $code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Monaco', monospace !default;
-
-
-
 
 
 /// Copy text color
@@ -38,9 +35,15 @@ $mid-grey: rgb(153, 153, 153) !default;
 /// @type Color
 $dark-grey: rgb(68, 68, 68) !default;
 
-
-
-
+$rhino: #273650;
+$manatee: #939aa7;
+$wheat: #f7dbb1;
+$nebula: #cbdbd8;
+$black: #000;
+$periwinkle: #b8c8e5;
+$aqua: #ebf5f3;
+$opal: #a4bfba;
+$snow: #fff;
 
 /// Container's maximum width
 /// @type Length

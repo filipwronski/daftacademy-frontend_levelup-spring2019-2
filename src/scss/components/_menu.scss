@@ -5,9 +5,9 @@
     margin-bottom: 2px;
     margin-top: 68px;
     &__item {
-        color: #a4bfba;
+        color: $opal;
         &--active {
-            color: #273650;
+            color: $rhino;
             position: relative;
             &:after {
                 content: '';
@@ -16,7 +16,7 @@
                 background: red;
                 position: absolute;
                 height: 1px;
-                background: #273650;
+                background: $rhino;
             }
         }
     }
